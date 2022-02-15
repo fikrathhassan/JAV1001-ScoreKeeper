@@ -92,13 +92,28 @@
             android:textColor="@color/black"
             android:layout_marginStart="15dp"/>
     </TableRow>
+    <TableRow>
+        <RadioButton
+            android:id="@+id/rdo_spnr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spnr_scores"
+            android:layout_weight=".7"
+            android:layout_height="wrap_content"
+            android:entries="@array/scores" />
+    </TableRow>
     <!-- Space to allow user to enter score -->
     <TableRow
         android:layout_width="match_parent"
         android:gravity="center">
+        <RadioButton
+            android:id="@+id/rdo_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <EditText
             android:id="@+id/edt_score"
-            android:layout_width="match_parent"
+            android:layout_weight=".7"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="@string/edt_scoreHint"
@@ -107,16 +122,26 @@
     <!-- Section for increasing and decreasing score for selected team -->
     <TableRow
         android:gravity="center">
-        <Button
-            android:id="@+id/btn_scoreDecrease"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_scoreDecrease" />
-        <Button
-            android:id="@+id/btn_scoreIncrease"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_scoreIncrease"
-            android:layout_marginStart="20dp"/>
+        <RelativeLayout
+            android:layout_weight=".475"
+            android:gravity="end">
+            <Button
+                android:id="@+id/btn_scoreDecrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_scoreDecrease" />
+        </RelativeLayout>
+        <View
+            android:layout_height="match_parent"
+            android:layout_weight=".05" />
+        <RelativeLayout
+            android:layout_weight=".475"
+            android:gravity="start">
+            <Button
+                android:id="@+id/btn_scoreIncrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_scoreIncrease"  />
+        </RelativeLayout>
     </TableRow>
 </TableLayout>
