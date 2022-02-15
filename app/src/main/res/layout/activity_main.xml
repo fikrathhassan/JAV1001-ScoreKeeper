@@ -1,147 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
-    android:id="@+id/team_name_score"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="10dp">
-    <!-- Contents for heading -->
-    <TableRow>
-        <TextView
-            android:id="@+id/txt_teamName"
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:text="@string/txt_teamName"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/txt_teamScore"
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="@string/txt_teamScore"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-    </TableRow>
-    <!-- Contents for team name and score -->
-    <TableRow>
-        <TextView
-            android:id="@+id/txt_teamIndia"
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:text="@string/txt_teamIndia"
-            android:textSize="25sp"
-            android:textColor="@color/green" />
-        <TextView
-            android:id="@+id/txt_teamOneScore"
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="@string/txt_score"
-            android:textSize="25sp"
-            android:textColor="@color/red" />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:id="@+id/txt_teamAustralia"
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:text="@string/txt_teamAustralia"
-            android:textSize="25sp"
-            android:textColor="@color/green" />
-        <TextView
-            android:id="@+id/txt_teamTwoScore"
-            android:layout_weight=".5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="@string/txt_score"
-            android:textSize="25sp"
-            android:textColor="@color/red" />
-    </TableRow>
-    <!-- Contents for team selection for scoring -->
-    <TableRow
-        android:layout_marginTop="20dp">
+    <!-- Section for displaying team names and scores -->
+    <TableLayout
+        android:id="@+id/section_teamDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/section_heading">
+            <TextView
+                android:id="@+id/txt_teamName"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/txt_teamName"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_teamScore"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/txt_teamScore"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/section_teamOne">
+            <TextView
+                android:id="@+id/txt_teamIndia"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/txt_teamIndia"
+                android:textSize="25sp"
+                android:textColor="@color/green" />
+            <TextView
+                android:id="@+id/txt_teamOneScore"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/txt_score"
+                android:textSize="25sp"
+                android:textColor="@color/red" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/section_teamTwo">
+            <TextView
+                android:id="@+id/txt_teamAustralia"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/txt_teamAustralia"
+                android:textSize="25sp"
+                android:textColor="@color/green" />
+            <TextView
+                android:id="@+id/txt_teamTwoScore"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/txt_score"
+                android:textSize="25sp"
+                android:textColor="@color/red" />
+        </TableRow>
+    </TableLayout>
+    <!-- Section for updating scores for teams -->
+    <LinearLayout
+        android:id="@+id/section_scoring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_scoreUpdate" />
-    </TableRow>
-    <TableRow>
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_teamIndia" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_teamAustralia"
-            android:textColor="@color/black"
-            android:layout_marginStart="15dp"/>
-    </TableRow>
-    <TableRow>
-        <RadioButton
-            android:id="@+id/rdo_spnr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Spinner
-            android:id="@+id/spnr_scores"
-            android:layout_weight=".7"
-            android:layout_height="wrap_content"
-            android:entries="@array/scores" />
-    </TableRow>
-    <!-- Space to allow user to enter score -->
-    <TableRow
-        android:layout_width="match_parent"
-        android:gravity="center">
-        <RadioButton
-            android:id="@+id/rdo_edt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/edt_score"
-            android:layout_weight=".7"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="@string/edt_scoreHint"
-            android:inputType="number" />
-    </TableRow>
-    <!-- Section for increasing and decreasing score for selected team -->
-    <TableRow
-        android:gravity="center">
+        <!-- Section for selecting team for score updation -->
         <RelativeLayout
-            android:layout_weight=".475"
-            android:gravity="end">
+            android:id="@+id/section_teamSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_teamIndia"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/switch_score"
+                android:text="@string/txt_teamAustralia"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_scoreMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_scoreMethod"
+            android:layout_marginTop="10dp"/>
+        <!-- Section for updating score with pre defined values -->
+        <RelativeLayout
+            android:id="@+id/section_scoringOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdo_spnr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+            <Spinner
+                android:id="@+id/spnr_scores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/scores"
+                android:layout_toEndOf="@+id/rdo_spnr"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <!-- Section for entering score manually -->
+        <RelativeLayout
+            android:id="@+id/section_scoringTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rdo_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edt_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/edt_scoreHint"
+                android:inputType="number"
+                android:layout_toEndOf="@+id/rdo_edt"/>
+        </RelativeLayout>
+        <!-- Section for button to increase and decrease scores -->
+        <RelativeLayout
+            android:id="@+id/section_btnScores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
             <Button
                 android:id="@+id/btn_scoreDecrease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_scoreDecrease" />
-        </RelativeLayout>
-        <View
-            android:layout_height="match_parent"
-            android:layout_weight=".05" />
-        <RelativeLayout
-            android:layout_weight=".475"
-            android:gravity="start">
             <Button
                 android:id="@+id/btn_scoreIncrease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_scoreIncrease"  />
+                android:text="@string/btn_scoreIncrease"
+                android:layout_toEndOf="@id/btn_scoreDecrease"
+                android:layout_marginStart="10dp"/>
         </RelativeLayout>
-    </TableRow>
-</TableLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -7,6 +7,7 @@
     <string name="txt_teamAustralia">Australia</string>
     <string name="txt_score">0</string>
     <string name="txt_scoreUpdate">Update score for:</string>
+    <string name="txt_scoreMethod">Select a method for scoring:</string>
     <string name="edt_scoreHint">enter score</string>
     <string name="btn_scoreIncrease">+</string>
     <string name="btn_scoreDecrease">-</string>
