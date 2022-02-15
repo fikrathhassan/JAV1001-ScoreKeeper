@@ -1,3 +1,3 @@
 # Score Keeper
-Fikrath Hassan
-A00254511
+Student Name    : Fikrath Hassan <br />
+Student Number  : A00254511
