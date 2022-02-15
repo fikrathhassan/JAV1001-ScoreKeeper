@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+
+    <string name="txt_teamName">Team Name</string>
+    <string name="txt_teamScore">Team Score</string>
+    <string name="txt_teamIndia">India</string>
+    <string name="txt_teamAustralia">Australia</string>
+    <string name="txt_score">0</string>
+    <string name="txt_scoreUpdate">Update score for:</string>
+    <string name="edt_scoreHint">enter score</string>
+    <string name="btn_scoreIncrease">+</string>
+    <string name="btn_scoreDecrease">-</string>
+</resources>
