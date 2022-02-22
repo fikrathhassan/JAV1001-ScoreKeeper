@@ -22,8 +22,10 @@
                 android:gravity="start"
                 android:text="@string/txt_teamName"
                 android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@color/purple_700"
+                android:padding="5dp"/>
             <TextView
                 android:id="@+id/txt_teamScore"
                 android:layout_weight=".5"
@@ -32,11 +34,14 @@
                 android:gravity="end"
                 android:text="@string/txt_teamScore"
                 android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@color/purple_500"
+                android:padding="5dp" />
         </TableRow>
         <TableRow
-            android:id="@+id/section_teamOne">
+            android:id="@+id/section_teamOne"
+            android:background="@color/black_10">
             <TextView
                 android:id="@+id/txt_teamIndia"
                 android:layout_weight=".5"
@@ -45,19 +50,23 @@
                 android:gravity="start"
                 android:text="@string/txt_teamIndia"
                 android:textSize="25sp"
-                android:textColor="@color/green" />
+                android:textColor="@color/green"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"/>
             <TextView
-                android:id="@+id/txt_teamOneScore"
+                android:id="@+id/txt_teamIndiaScore"
                 android:layout_weight=".5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:text="@string/txt_score"
-                android:textSize="25sp"
-                android:textColor="@color/red" />
+                android:textSize="50sp"
+                android:textColor="@color/red"
+                android:padding="5dp" />
         </TableRow>
         <TableRow
-            android:id="@+id/section_teamTwo">
+            android:id="@+id/section_teamTwo"
+            android:background="@color/black_20">
             <TextView
                 android:id="@+id/txt_teamAustralia"
                 android:layout_weight=".5"
@@ -66,16 +75,19 @@
                 android:gravity="start"
                 android:text="@string/txt_teamAustralia"
                 android:textSize="25sp"
-                android:textColor="@color/green" />
+                android:textColor="@color/green"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp" />
             <TextView
-                android:id="@+id/txt_teamTwoScore"
+                android:id="@+id/txt_teamAustraliaScore"
                 android:layout_weight=".5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:text="@string/txt_score"
-                android:textSize="25sp"
-                android:textColor="@color/red" />
+                android:textSize="50sp"
+                android:textColor="@color/red"
+                android:padding="5dp"/>
         </TableRow>
     </TableLayout>
     <!-- Section for updating scores for teams -->
@@ -95,14 +107,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch_score"
+                android:id="@+id/switch_changeTeam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_teamIndia"/>
+                android:text="@string/txt_teamIndia" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/switch_score"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/switch_changeTeam"
                 android:text="@string/txt_teamAustralia"
                 android:textColor="@color/black"
                 android:layout_centerVertical="true"/>
@@ -122,14 +135,13 @@
                 android:id="@+id/rdo_spnr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"/>
+                android:checked="true" />
             <Spinner
                 android:id="@+id/spnr_scores"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/scores"
-                android:layout_toEndOf="@+id/rdo_spnr"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/rdo_spnr" />
         </RelativeLayout>
         <!-- Section for entering score manually -->
         <RelativeLayout
@@ -147,7 +159,8 @@
                 android:gravity="center"
                 android:hint="@string/edt_scoreHint"
                 android:inputType="number"
-                android:layout_toEndOf="@+id/rdo_edt"/>
+                android:layout_toEndOf="@+id/rdo_edt"
+                tools:ignore="Autofill" />
         </RelativeLayout>
         <!-- Section for button to increase and decrease scores -->
         <RelativeLayout
