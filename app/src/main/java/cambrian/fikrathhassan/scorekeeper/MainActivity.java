@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 score_spnr = Integer.parseInt(scoreSpnr);
                 if (!switch_changeTeam.isChecked()) {
+                    // For India
                     if (rdo_spnr.isChecked()) {
+                        // Spinner scoring method
                         int score = Integer.parseInt(txt_teamIndiaScore.getText().toString()) - score_spnr;
                         if (score < 0) {
                             Toast.makeText(MainActivity.this, "Score cannot be less than 0", Toast.LENGTH_SHORT).show();
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     if (rdo_edt.isChecked()) {
+                        // Manual scoring method
                         int entered_value = Integer.parseInt(edt_score.getText().toString());
                         if (entered_value > 0 && entered_value < 99) {
                             int score = Integer.parseInt(txt_teamIndiaScore.getText().toString()) - entered_value;
@@ -115,7 +118,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 } else {
+                    // For Australia
                     if (rdo_spnr.isChecked()) {
+                        // Spinner scoring method
                         int score = Integer.parseInt(txt_teamAustraliaScore.getText().toString()) - score_spnr;
                         if (score < 0) {
                             Toast.makeText(MainActivity.this, "Score cannot be less than 0", Toast.LENGTH_SHORT).show();
@@ -124,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     if (rdo_edt.isChecked()) {
+                        // Manual scoring method
                         int entered_value = Integer.parseInt(edt_score.getText().toString());
                         if (entered_value > 0 && entered_value < 99) {
                             int score = Integer.parseInt(txt_teamAustraliaScore.getText().toString()) - entered_value;
@@ -146,7 +152,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 score_spnr = Integer.parseInt(scoreSpnr);
                 if (!switch_changeTeam.isChecked()) {
+                    // For India
                     if (rdo_spnr.isChecked()) {
+                        // Spinner scoring method
                         int score = Integer.parseInt(txt_teamIndiaScore.getText().toString()) + score_spnr;
                         if (score < 0) {
                             Toast.makeText(MainActivity.this, "Score cannot be less than 0", Toast.LENGTH_SHORT).show();
@@ -155,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     if (rdo_edt.isChecked()) {
+                        // Manual scoring method
                         int entered_value = Integer.parseInt(edt_score.getText().toString());
                         if (entered_value > 0 && entered_value < 99) {
                             int score = Integer.parseInt(txt_teamIndiaScore.getText().toString()) + entered_value;
@@ -164,7 +173,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 } else {
+                    // For Australia
                     if (rdo_spnr.isChecked()) {
+                        // Spinner scoring method
                         int score = Integer.parseInt(txt_teamAustraliaScore.getText().toString()) + score_spnr;
                         if (score < 0) {
                             Toast.makeText(MainActivity.this, "Score cannot be less than 0", Toast.LENGTH_SHORT).show();
@@ -173,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     if (rdo_edt.isChecked()) {
+                        // Manual scoring method
                         int entered_value = Integer.parseInt(edt_score.getText().toString());
                         if (entered_value > 0 && entered_value < 99) {
                             int score = Integer.parseInt(txt_teamAustraliaScore.getText().toString()) + entered_value;
